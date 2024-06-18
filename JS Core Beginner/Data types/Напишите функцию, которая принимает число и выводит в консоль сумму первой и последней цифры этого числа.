@@ -1,0 +1,12 @@
+'use strict'
+
+function summ(num) {
+    let str= ''+ num
+    
+    let  delitel = 1
+    for(let i=0;i<str.length-1;i++)  delitel*=10 
+    
+  return parseInt(num/delitel)+num%10
+}
+
+console.log(summ(324356));
