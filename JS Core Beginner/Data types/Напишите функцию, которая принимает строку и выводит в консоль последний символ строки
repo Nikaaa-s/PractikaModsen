@@ -1,0 +1,7 @@
+'use strict'
+
+function find(str) {
+  return str[str.length-1]
+}
+
+console.log(find('l;ku,jdhak'));
