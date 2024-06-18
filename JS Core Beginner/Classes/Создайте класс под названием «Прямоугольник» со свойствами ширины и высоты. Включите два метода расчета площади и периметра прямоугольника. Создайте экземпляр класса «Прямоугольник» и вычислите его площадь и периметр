@@ -1,0 +1,22 @@
+'use strict'
+
+class Rectangle{
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+    info(){
+        return this.name+' '+this.age+' '+this.country
+    }
+    perimetr(){
+        return 2 * this.width + 2 * this.height;
+    }
+    square(){
+        return this.width * this.height;
+    }
+}
+
+let rectangle = new Rectangle(2,34)
+
+console.log(rectangle.perimetr())
+console.log(rectangle.square())
