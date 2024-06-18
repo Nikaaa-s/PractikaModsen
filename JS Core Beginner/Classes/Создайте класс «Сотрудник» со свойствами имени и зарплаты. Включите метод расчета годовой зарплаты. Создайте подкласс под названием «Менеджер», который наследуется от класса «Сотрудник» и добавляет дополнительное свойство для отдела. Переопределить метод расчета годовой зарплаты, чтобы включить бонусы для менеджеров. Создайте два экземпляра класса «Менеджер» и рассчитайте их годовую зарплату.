@@ -1,0 +1,29 @@
+'use strict'
+
+class Job{
+    constructor(name,number){
+        this.name = name;
+        this.number = number;
+    }
+    sum(){
+        return  this.number * 12;
+    }
+}
+class Manager extends Job{
+    constructor(name,number,bonus){
+        super(name,number)
+        this.bonus = bonus
+    }
+    sum(){
+        return  this.number * 12 + this.bonus;
+    }
+    
+    
+}
+
+
+let Petr = new Manager('Petr',600,34)
+let Oleg = new Manager('Oleg',300,29)
+
+console.log(Petr.name+' '+ Petr.sum())
+console.log(Oleg.name+' '+ Oleg.sum())
