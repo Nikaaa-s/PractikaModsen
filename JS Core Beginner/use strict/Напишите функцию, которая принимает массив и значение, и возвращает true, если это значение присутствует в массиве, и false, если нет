@@ -1,0 +1,6 @@
+'use strict'
+function findNumber(arr,number) {
+  return arr.includes(number);
+}
+
+console.log(findNumber(['Apple', 4, 4, 6,  'London'], 'London'))
