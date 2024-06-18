@@ -1,0 +1,18 @@
+'use strict'
+
+class Person{
+    constructor(name,age,country){
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    info(){
+        return this.name+' '+this.age+' '+this.country
+    }
+}
+
+let person = new Person('Petr',34,'Spain')
+let person1 = new Person('Pavel',24,'Poland')
+
+console.log(person.info())
+console.log(person1.info())
