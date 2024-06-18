@@ -1,0 +1,13 @@
+'use strict'
+
+function summ(str) {
+    let i= 1
+    setInterval(()=>{
+    if (i!= 20) 
+    {
+    console.log(str) 
+    i++
+    }},200)
+     
+}
+console.log(summ('rhrghhtty4rfgse3'))
