@@ -1,0 +1,13 @@
+'use strict'
+function findVowel(str) {
+    let sum = 0;
+    let vowels = ['a','e','u','i','o','y','A','E','U','I','O','Y']
+  for (let i=0;i<str.length;i++){
+      for (let j=0;j<vowels.length;j++){
+          if(str[i]==vowels[j]) sum++
+      }
+  }
+ 
+  return sum;
+}
+console.log(findVowel('AppleghnkgMJopr35i4u5t09georj;odzifv'))
