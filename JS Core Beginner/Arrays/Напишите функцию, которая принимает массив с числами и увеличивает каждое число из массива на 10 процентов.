@@ -1,0 +1,11 @@
+'use strict'
+
+function summ(arr) {
+    for(let i=0;i<arr.length;i++) {
+        arr[i]+=arr[i]/10 
+    }
+    
+  return arr
+}
+
+console.log(summ([2,4,54,65,100,566]));
