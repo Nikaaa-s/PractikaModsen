@@ -1,0 +1,21 @@
+'use strict'
+
+function findX() {
+   for(let i=0;i<3;i++){
+    const x=1;
+    console.log(x)
+   }
+  //return x;// переменная созданная при пмощи const не видима за блоком кода
+}
+function findY() {
+    for(let i=0;i<3;i++){
+     var y=3;
+    console.log(y+2)
+   }
+   y+=3 // переменная созданная при помощи var видна за пределами блока
+   //console.log(i)// переменная созданная при пмощи let не видима за блок
+  return y;
+}
+
+console.log(findX());
+console.log(findY());
