@@ -1,0 +1,13 @@
+'use strict'
+
+function summ(num) {
+    try{
+        num=''+num
+        num[2]=6
+        return num
+    }
+    catch(TypeError){
+        return 'error'
+    }
+}
+console.log(summ(34))
