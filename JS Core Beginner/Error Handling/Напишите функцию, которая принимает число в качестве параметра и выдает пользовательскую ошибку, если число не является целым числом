@@ -1,0 +1,13 @@
+'use strict'
+
+function summ(a) {
+    try {
+       
+    if( a%1 != 0) throw new Error('число не является целым')
+        
+        return a
+   
+} catch(err) {
+    return err.message 
+}}
+console.log(summ(3.2))
