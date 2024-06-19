@@ -1,0 +1,27 @@
+'use strict'
+
+const fetch = require('node-fetch');
+
+async function getUrl(url1, url22){
+    
+    let promises = await fetch(url1)
+    let data1 = await promises.json();
+
+    let url2 = url22.replace('{id}',data1.id)
+
+    let promises2 = await fetch(url2)
+    let data2 = await promises2.text();
+
+    return {data1, data2}    
+}
+
+let url1 = 'https://jsonplaceholder.typicode.com/posts/1';
+let url22 = 'https://jsonplaceholder.typicode.com/posts/{id}/comments';
+
+
+getUrl(url1,url22)
+    .then(content=> {
+    console.log(content.data1)
+    console.log(content.data2)
+}
+)
