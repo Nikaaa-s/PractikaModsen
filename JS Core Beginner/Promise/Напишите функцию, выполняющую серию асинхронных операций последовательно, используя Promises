@@ -1,0 +1,37 @@
+'use strict'
+function operation1(){
+return  new Promise(function(resolve, reject) {
+  setTimeout(() =>{
+      resolve("done 1")
+      console.log('done 1')
+  }, 200);
+});
+}
+function operation2(){
+return  new Promise(function(resolve, reject) {
+  setTimeout(() =>{
+      resolve("done 2")
+      console.log('done 2')
+  }, 200);
+});
+}
+function operation3(){
+return  new Promise(function(resolve, reject) {
+  setTimeout(() =>{
+      resolve("done 3")
+      console.log('done 3')
+  }, 200);
+});
+}
+
+operation1().then(
+    result => {return operation2()
+    console.log('finish')
+    }
+    )
+    .then(
+        result1=> {return operation3()
+            console.log('finish')
+        }
+    ) 
+    
