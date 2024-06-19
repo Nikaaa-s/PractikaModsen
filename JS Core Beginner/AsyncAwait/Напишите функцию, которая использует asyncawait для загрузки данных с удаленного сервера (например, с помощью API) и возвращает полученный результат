@@ -1,0 +1,25 @@
+'use strict'
+
+const fetch = require('node-fetch');
+
+async function getUrl(urls){
+    let promises = urls.map(url => fetch(url).then(response => {return response.text()}))
+    let result = await Promise.all(promises) 
+    let results = result.reduce((acc, data) => {
+        return {...acc, ...data};
+    }, {});
+return results
+    
+}
+
+let urls = [
+    'https://statistics-api.wildberries.ru/api/v2/supplier/reportDetailByPeriod',
+    'https://statistics-api.wildberries.ru/api/v1/supplier/reportDetailByPeriod',
+    'https://jsonplaceholder.typicode.com/posts/1'
+];
+
+
+getUrl(urls)
+    .then(content=> {
+    console.log(content)}
+)
