@@ -1,7 +1,6 @@
 'use strict'
 
 const fetch = require('node-fetch');
-
 async function getUrl(url1, url22){
     
     let promises = await fetch(url1)
