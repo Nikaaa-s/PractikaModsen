@@ -1,0 +1,9 @@
+function after(callback) {
+    setTimeout(callback, 2000);
+}
+
+function myCallback() {
+    console.log("finish");
+}
+
+after(myCallback);
