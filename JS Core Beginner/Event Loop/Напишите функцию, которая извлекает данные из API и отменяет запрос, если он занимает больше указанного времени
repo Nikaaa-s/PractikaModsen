@@ -1,0 +1,16 @@
+async function time(url, timeout) {
+    const promise = fetch(url).then(response => { 
+        return response.json(); });
+
+    const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Time error')), timeout);
+    });
+    return Promise.race([promise, timeoutPromise]);
+}
+
+const url = 'https://jsonplaceholder.typicode.com/posts/1';
+const timeout = 2000; 
+
+time(url, timeout)
+    .then(data => console.log(data))
+    .catch(error => console.error(error.message));
