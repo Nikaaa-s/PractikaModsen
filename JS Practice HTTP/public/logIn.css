@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #dadbb8;
+}
+
+form 
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+form::before 
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: animate 5s ease-in-out infinite;
+}
+form span 
+{
+  position: relative;
+  display: block;
+  
+  background: #dadbb8;
+  z-index: 2;
+  transition: 1.5s;
+}
+form span:hover 
+{
+  transition: 5s;
+}
+form .signup
+{
+  position: absolute;
+  width: 400px;
+  background-color: #dadbb8;
+ 
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+}
+form .signup .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+form .signup .content h2 
+{
+  font-size: 2em;
+  color: #000000;
+  text-transform: uppercase;
+}
+form .signup .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+form .signup .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+form .signup .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+form .signup .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signup .content .form .inputBox input:focus ~ i,
+.signup .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #ffffff;
+}
+/*.signup .content .form .links 
+{
+    filter: drop-shadow(0 0 2px #ff8fdd);
+    text-align: center;
+}*/
+.signup .content .form .links a 
+{
+  color: #060606;
+  text-decoration: none;
+}
+
+/* .signup .content .form .links a:nth-child(2)
+{
+  color: #ff8fdd;
+  font-weight: 600;
+} */
+
+.signup .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  background: #fafafa;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+@media (max-width: 900px)
+{
+  form span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  form span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: relative;
+  z-index: 3;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  transition: 1.5s; 
+}
+.modal-content {
+  background-color: #181818f1;
+  color: #f4f4f4;
+  margin-bottom: 40%;
+  margin-left: 40%;
+  padding: 20px;
+  border: 1px solid #fff9fd;
+  width: 20%;
+  border-radius: 4px;
+  text-align: center;
+  animation: modalOpenAnim 1.5s ease-in-out;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 8);
+}
+@keyframes modalOpenAnim 
+{
+  0%
+  {
+    margin-bottom: 30%;
+    opacity: 0;
+  } 
+  100%
+  {
+    margin-bottom: 40%;
+    opacity: 1;
+  }
+}

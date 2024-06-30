@@ -1,0 +1,26 @@
+table.itemsTable{
+	width: 100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	height: auto;
+}
+table.itemsTable,table.itemsTable td, table.itemsTable th {
+	border: 1px solid #595959;
+}
+table.itemsTable td,table.itemsTable th {
+	padding: 3px;
+	width: 30px;
+	height: 35px;
+}
+table.itemsTable th {
+	background: #96a81c; 
+	color: #fff; 
+	font-weight: normal;
+}
+
+.asdasd{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	gap: 20px;
+}

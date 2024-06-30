@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en"> 
+
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Gallery!</title> 
+  <link rel="stylesheet" href="task4.css">
+ </head> 
+
+ <body>
+   <div class="galleryBody"> 
+    <div class="content"> 
+     <h2>Gallery</h2>
+
+     <form name="filter" id="filterForm">    
+        
+        <input type="checkbox" name="breed"> <i>With breed?</i> 
+        <br>  
+        <input type="text" name="limit" required> <i>How much cats? (1-100)</i> 
+        <br>
+        <select name="breedType" id="breedType" required>
+            <option value="none">I don't care!</option>
+            <option value="abys">Abyssinian</option>
+            <option value="aege">Aegean</option>
+            <option value="abob">American Bobtail</option>
+            <option value="acur">American Curl</option>
+            <option value="asho">American Shorthair</option>
+            <option value="awir">American Wirehair</option>
+            <option value="amau">Arabian Mau</option>
+            <option value="amis">Australian Mist</option>
+         </select> <i>Breed?</i> 
+         <br>
+        <input type="submit" id="submit" value="Get Some Cats!"> 
+    </form>
+
+     <div class="form"> 
+        <footer id="footer">Lets load some cats!</footer>
+     </div> 
+    </div> 
+   </div> 
+</body>
+<script src="task4.js"></script>
+</html>
